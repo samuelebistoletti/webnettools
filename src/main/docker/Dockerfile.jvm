@@ -1,13 +1,15 @@
-FROM registry.access.redhat.com/ubi8/ubi-minimal:8.3
+FROM registry.access.redhat.com/ubi8/ubi-minimal:8.4
 
 ARG JAVA_PACKAGE=java-11-openjdk-headless
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en'
 # Install java and the run-java script
 # Also set up permissions for user `1001`
-RUN microdnf install util-linux procps bind-utils hostname iputils curl ca-certificates tar git nmap whois ${JAVA_PACKAGE} \
+RUN microdnf install util-linux procps bind-utils hostname iputils curl ca-certificates tar git nmap ${JAVA_PACKAGE} \
     && microdnf update \
     && microdnf clean all \
-    && rpm -i https://rpmfind.net/linux/centos/8-stream/BaseOS/x86_64/os/Packages/traceroute-2.1.0-6.el8.x86_64.rpm \
+    && rpm -i http://mirror.centos.org/centos/8/AppStream/x86_64/os/Packages/whois-nls-5.5.1-2.el8.noarch.rpm \
+    && rpm -i http://mirror.centos.org/centos/8/AppStream/x86_64/os/Packages/whois-5.5.1-2.el8.x86_64.rpm \
+    && rpm -i http://mirror.centos.org/centos/8/BaseOS/x86_64/os/Packages/traceroute-2.1.0-6.el8.x86_64.rpm \
     && rpm -i http://mirror.centos.org/centos/8/BaseOS/x86_64/os/Packages/mtr-0.92-3.el8.x86_64.rpm \
     && mkdir /deployments \
     && chown 1001 /deployments \
