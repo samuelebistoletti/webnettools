@@ -43,8 +43,8 @@
                   <executable>docker</executable>
                   <arguments>
                     <argument>tag</argument>
-                    <argument>johannesschafer/webnettools:${project.version}</argument>
-                    <argument>johannesschafer/webnettools:latest</argument>
+                    <argument>samuelebistoletti/webnettools:${project.version}</argument>
+                    <argument>samuelebistoletti/webnettools:latest</argument>
                   </arguments>
                 </configuration>
               </execution>
@@ -58,7 +58,7 @@
                   <executable>docker</executable>
                   <arguments>
                     <argument>push</argument>
-                    <argument>johannesschafer/webnettools:latest</argument>
+                    <argument>samuelebistoletti/webnettools:latest</argument>
                   </arguments>
                 </configuration>
               </execution>
@@ -72,7 +72,7 @@
                   <executable>docker</executable>
                   <arguments>
                     <argument>tag</argument>
-                    <argument>johannesschafer/webnettools:${project.version}</argument>
+                    <argument>samuelebistoletti/webnettools:${project.version}</argument>
                     <argument>registry.heroku.com/web-net-tools/web</argument>
                   </arguments>
                 </configuration>
@@ -344,7 +344,7 @@
         <configuration>
           <images>
             <image>
-              <name>johannesschafer/webnettools:${project.version}</name>
+              <name>samuelebistoletti/webnettools:${project.version}</name>
               <build>
                 <tags>
                   <tag>${project.version}</tag>
