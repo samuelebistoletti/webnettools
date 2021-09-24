@@ -78,8 +78,8 @@
 
 <main role="main" class="container-fluid">
     <h1>
-        <i class="bi bi-hdd-network" />
-        Web Net Tools
+        <img alt="" src="/favicon.ico" height="55px" />
+        Eolo Net Tools
     </h1>
 
     {#if status === Status.READY}

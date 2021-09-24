@@ -12,7 +12,7 @@
         </small>
         <div class="px-2">
             <a
-                href="https://github.com/johannesschaefer/webnettools"
+                href="https://github.com/samuelebistoletti/webnettools"
                 target="_blank">
                 <i class="bi bi-github" />
             </a>
