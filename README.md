@@ -35,7 +35,7 @@ can help you to make such services available for easy use.
 
 Simple run the following Docker command:
 ```
-docker run -p 8080:8080 --name webnettools johannesschafer/webnettools
+docker run -p 8080:8080 --name webnettools samuelebistoletti/webnettools:1.4.0-SNAPSHOT
 ```
 
 ## Configuration options
@@ -48,7 +48,7 @@ Currently you can configure the following aspects
 
 * To set additional certificates for the testssl.sh tool, just map the folder with the certificates to the container folder /certs. This directory can be adjusted by the Docker environment variable `CA_DIR` E.g.
 ```
-docker run -p 8080:8080 -v ./localfolderwithcerts:/certs --name webnettools johannesschafer/webnettools
+docker run -p 8080:8080 -v ./localfolderwithcerts:/certs --name webnettools samuelebistoletti/webnettools:1.4.0-SNAPSHOT
 ```
 
 
